@@ -1,0 +1,7 @@
+<view class='.container'>
+<text>This is a second chance</text>
+<text>{{mytext}}</text>
+<text>mynum.nu:{{mynum.nu}}</text>
+<text>num:{{num}}</text>
+<button type='default' bindtap='myfunction'>测试按钮</button>
+</view>
