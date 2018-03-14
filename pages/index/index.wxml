@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <!--<navigator url='../logs/logs' hover-class='navaigator-hover'>{{motto}}</navigator>-->
+    <navigator url='../go/go' redirect hover-class='navaigator-hover'>重定向组件：跳转到go</navigator>
+    <navigator url='../go/go' hover-class='navaigator-hover'>定向组件：跳转到go</navigator>
+    <button type='default' ontap='go'>跳转到go</button>
+  </view>
+</view>
